@@ -1,0 +1,380 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf") format("truetype"),
+    url("./assets/fonts/manrope/static/Manrope-Regular.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype"),
+    url("./assets/fonts/fraunces/static/Fraunces_144pt/Fraunces_144pt-SemiBold.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+:root {
+  --color-dark: #24053e;
+  --color-accent: #44ffa1;
+  --color-light: #fcf8ff;
+  --color-muted: #584d62;
+  --font-sans: "Manrope", sans-serif;
+  --font-serif: "Fraunces", serif;
+
+}
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+
+/* ==========================================================================
+   General styles
+   ========================================================================== */
+body {
+  font-family: var(--font-sans);
+  color: var(--color-dark);
+  background: white;
+  font-size: 18px;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: var(--color-accent);
+  padding: 18px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+
+
+
+/* ==========================================================================
+Hero section
+========================================================================== */
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.hero {
+  background-color: var(--color-dark);
+  color: white;
+  text-align: center;
+  padding-top: 36px;
+  position: relative;
+
+}
+
+.top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.top a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+}
+
+.top a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+}
+
+.text-container {
+  width: 50%;
+  margin: 0 auto;
+
+}
+
+.hero .title {
+  font-size: 90px;
+  font-family: var(--font-serif);
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+
+.title span {
+  border-bottom: 2px solid var(--color-accent);
+}
+
+
+.hero-image-container {
+  position: relative;
+  top: 100px;
+  max-width: 500px;
+  z-index: 2;
+}
+
+
+
+
+
+.bg-left {
+  position: absolute;
+  top: 50px;
+  left: -150px;
+}
+
+.bg-right {
+  position: absolute;
+  top: 150px;
+  right: 0px;
+
+}
+
+
+
+
+
+
+/* ==========================================================================
+about section
+========================================================================== */
+.about {
+  background-color: var(--color-light);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  color: var(--color-dark);
+  text-align: center;
+}
+
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.card .title {
+  font-size: 30px;
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+
+.tall {
+  font-size: 20px;
+  padding: 5px;
+  font-family: var(--font-serif);
+  font-weight: 900;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--color-dark);
+  border-radius: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.card p {
+  color: var(--color-muted);
+  line-height: 32px;
+}
+
+/* ==========================================================================
+Founder section
+========================================================================== */
+.founder {
+  padding-top: 160px;
+}
+
+.founder .container {
+  position: relative;
+
+}
+
+.founder-text {
+  width: 80%;
+  margin-left: auto;
+  padding: 50px 100px;
+  background-color: var(--color-dark);
+  text-align: center;
+  color: white;
+}
+
+.founder-image {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  max-width: 281px;
+  z-index: 2;
+}
+
+.founder .title {
+  font-size: 54px;
+  font-family: var(--font-serif);
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+
+
+.founder p {
+  line-height: 34px;
+  margin-bottom: 36px;
+}
+
+
+
+/* ==========================================================================
+Footer
+========================================================================== */
+footer {
+
+  text-align: center;
+  background-color: var(--color-light);
+  border-top: 3px dotted var(--color-dark);
+  padding: 36px;
+  margin-top: 50px;
+}
+
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+
+/* ==========================================================================
+Media queries
+========================================================================== */
+@media (width < 900px) {
+
+  .hero .title {
+    font-size: 60px;
+  }
+
+  .founder-image {
+    top: -50px;
+    left: 0;
+    max-width: 220px;
+  }
+}
+
+@media (width < 700px) {
+
+  .text-container {
+    width: 80%;
+
+  }
+
+  .hero .title {
+    font-size: 50px;
+
+  }
+
+
+  .btn {
+    font-size: 16px;
+    padding: 12px;
+    color: var(--color-dark);
+    border: 2px solid var(--color-dark);
+  }
+
+  .hero-image-container {
+    position: relative;
+    top: 100px;
+    max-width: 500px;
+    z-index: 2;
+  }
+
+
+  .bg-left {
+    display: none;
+  }
+
+  .bg-right {
+    display: none;
+
+  }
+
+  .about .container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .founder {
+    padding-top: 30px;
+  }
+
+  .founder .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .founder-image {
+    position: static;
+    max-width: 60%;
+  }
+
+  .founder-text {
+    margin: 0;
+    padding: 40px 20px;
+    width: 100%;
+  }
+}
+
